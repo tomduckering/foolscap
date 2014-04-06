@@ -1,0 +1,6 @@
+<h1>Hosts</h1>
+<ul>
+<% hosts.each do |host| %>
+<li><a href="/host/<%= host.name %>"><%= host.name %></a></li>
+<% end %>
+</ul>

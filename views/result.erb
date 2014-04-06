@@ -1,0 +1,20 @@
+<h1><%= result.name %></h1>
+<dl>
+	<dt>Hostname</dt>
+	<dd><%= result.hostname %></dd>
+	<dt>Hostname</dt>
+	<dd><%= result.generation_timestamp %></dd>
+</dl>
+
+<h2>Patches:</h2>
+
+<results>
+	<% result.results.each do |id,data| %>
+	<div class='patch_result'>
+	<h3 class='title'><%= data[:data][:title].to_s %></h3>
+	<h4 class='affected_product'>Affects: <%= data[:data][:affected_product]%></h4>
+	Patch Required: <%= data[:status] %>
+	<p class='description'><%= data[:data][:description] %></p>
+	</div>
+	<% end %>
+</results>
